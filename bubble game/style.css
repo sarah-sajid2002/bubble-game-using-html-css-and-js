@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  overflow: hidden;
+  background: #000851;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gameSection {
+  width: 80%;
+  height: 80%;
+  background: rgb(255, 255, 255);
+  overflow: hidden;
+  border-radius: 30px;
+}
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #4753bd;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px 40px;
+}
+.score,
+.hits,
+.timer {
+  font-size: 20px;
+  text-transform: uppercase;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.scoreDiv,
+.hitDiv,
+.timerDiv {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 10px;
+  color: blue;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.playStation {
+  width: 100%;
+  height: calc(100%-100px);
+  padding: 10px;
+  flex-wrap: wrap;
+  gap: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bubble {
+  width: 40px;
+  height: 40px;
+  background-color: #000851;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+.bubble:hover {
+  background-color: #4753bd;
+  color: black;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  .gameSection {
+    width: 90%;
+  }
+  header {
+    justify-content: space-between;
+    padding: 30px 0px;
+  }
+  .score,
+  .hits,
+  .timer {
+    width: 30%;
+  }
+  .scoreDiv,
+  .hitDiv,
+  .timerDiv {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    color: blue;
+    font-weight: normal;
+  }
+  .playStation {
+    width: 100%;
+    padding: 2px;
+    gap: 5px;
+  }
+}
+@media (max-width: 500px) {
+  .gameSection {
+    height: 100%;
+  }
+  header {
+    display: block;
+    height: 150px;
+    padding: 10px;
+  }
+  .score,
+  .hits,
+  .timer {
+    width: 80%;
+    text-align: start;
+    margin: 10px 0px;
+  }
+  .playStation {
+    gap: 5px;
+  }
+}
